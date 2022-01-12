@@ -3,6 +3,8 @@ package grpc
 import (
 	"context"
 	"fmt"
+	"os/exec"
+	"strings"
 
 	"log"
 	"net"
@@ -52,10 +54,19 @@ func (s *grpcService) Verify(ctx context.Context, in *emptypb.Empty) (*manager_p
 }
 
 func (s *grpcService) Execute(ctx context.Context, in *manager_pluginpb.ExecuteRequest) (*manager_pluginpb.ExecuteResponse, error) {
+
+	//TODO
+	// 이곳을 기점으로 어떻게 플러그인 기준을 어떻게 MVC 기준으로 가져갈지 생각할 수 있게 한다.?
+	// 아니면 그것은 자율에 맞긴다.
+
+	c, b := exec.Command("ls", "-al"), new(strings.Builder)
+	c.Stdout = b
+	c.Run()
+
 	return &manager_pluginpb.ExecuteResponse{
 		State:        manager_pluginpb.ExecuteResponse_SUCCESS,
-		Message:      "This is a Test",
-		ResourceType: "Memory",
+		Message:      b.String(),
+		ResourceType: "Go",
 	}, nil
 }
 

@@ -4,15 +4,17 @@ import (
 	"log"
 	"time"
 
+	//"time"
+
 	plugin_grpc "pilot-plugin/grpc"
 )
 
 const (
-	servName = "Node manager"
+	servName = "Pilot Plugin"
 )
 
 func main() {
-	log.Println("Start ", servName)
+	log.Println("Start Server: ", servName)
 
 	plugin_grpc.StartServer()
 
