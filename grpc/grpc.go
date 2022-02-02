@@ -93,5 +93,6 @@ func StartServer() error {
 		}
 	}()
 
+	log.Println("Pilot Plugin started")
 	return nil
 }
