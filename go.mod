@@ -3,7 +3,7 @@ module pilot-plugin
 go 1.16
 
 require (
-	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/golang/protobuf v1.5.2
 	github.com/xellos00/silver-bentonville v0.0.0-20220107234228-1c233087b431
 	golang.org/x/net v0.0.0-20211101193420-4a448f8816b3 // indirect
 	golang.org/x/sys v0.0.0-20211102192858-4dd72447c267 // indirect
