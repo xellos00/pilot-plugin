@@ -6,6 +6,6 @@
 {% hint style="info" %}
 
 This branch will be used only on purpose of demonstration 
-and therefore can be deleted anytime after end of Feb without notice.
+and therefore can be deleted anytime after end of Feb 2022 without notice.
 
 {%  endhint %}
